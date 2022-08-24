@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+// Please change the base URL to https://localhost:5000
+// to let the app work accordingly 
+const API = axios.create({ baseURL: 'https://traveldevise1.herokuapp.com/' });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
