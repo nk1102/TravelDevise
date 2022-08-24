@@ -1,3 +1,5 @@
+// Home page of the application 
+
 import React, { useState } from 'react';
 import { Container, Grow, Grid, AppBar, TextField, Button, Paper } from '@material-ui/core';
 import { useDispatch } from 'react-redux';

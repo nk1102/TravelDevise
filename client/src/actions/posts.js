@@ -1,6 +1,9 @@
 import { COMMENT,START_LOADING, END_LOADING, FETCH_ALL, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
 import * as api from '../api/index.js';
 
+/**
+ * get post method is used to get all the posts that are been created by the users 
+ */
 export const getPost = (id) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -12,7 +15,9 @@ export const getPost = (id) => async (dispatch) => {
     console.log(error);
   }
 };
-
+/**
+ * This getPosts method will get all the posts that are being created inside our application with the specific names of the user 
+ */
 export const getPosts = (page) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -24,7 +29,9 @@ export const getPosts = (page) => async (dispatch) => {
     console.log(error);
   }
 };
-
+/**
+ * getpostsBySearch this method will be used to get all the posts that are being searched by the user it will execute the query to get all the required posts 
+ */
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -36,7 +43,9 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
     console.log(error);
   }
 };
-
+/**
+ * This is the method which is created in order to create posts when user fills the form of the create posts 
+ */
 export const createPost = (post, navigate) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -49,7 +58,7 @@ export const createPost = (post, navigate) => async (dispatch) => {
     console.log(error);
   }
 };
-
+// This method is used to update the post of the system 
 export const updatePost = (id, post) => async (dispatch) => {
   try {
     const { data } = await api.updatePost(id, post);
@@ -59,7 +68,7 @@ export const updatePost = (id, post) => async (dispatch) => {
     console.log(error);
   }
 };
-
+// this method is used to like the post but only logined user can like the posts
 export const likePost = (id) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem('profile'));
 
@@ -71,6 +80,7 @@ export const likePost = (id) => async (dispatch) => {
     console.log(error);
   }
 };
+// this method is used to comment on the post by the logined user 
 export const commentPost = (value, id) => async (dispatch) => {
   try {
     const { data } = await api.comment(value, id);
@@ -82,7 +92,7 @@ export const commentPost = (value, id) => async (dispatch) => {
     console.log(error);
   }
 };
-
+// this method is used to the delete the posts 
 export const deletePost = (id) => async (dispatch) => {
   try {
     await await api.deletePost(id);

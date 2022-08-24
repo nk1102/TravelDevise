@@ -1,3 +1,4 @@
+// individual post creation with styles 
 import React from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography , ButtonBase } from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';

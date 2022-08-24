@@ -1,3 +1,6 @@
+// Post details page of the post
+
+
 import React, { useEffect } from 'react';
 import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/';
 import { useDispatch, useSelector } from 'react-redux';

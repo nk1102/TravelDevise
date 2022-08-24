@@ -1,3 +1,5 @@
+// all the actions types are created 
+
 export const CREATE = 'CREATE';
 export const UPDATE = 'UPDATE';
 export const DELETE = 'DELETE';

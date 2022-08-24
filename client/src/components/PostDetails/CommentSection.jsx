@@ -2,6 +2,10 @@ import React, { useState, useRef } from 'react';
 import { Typography, TextField, Button } from '@material-ui/core/';
 import { useDispatch } from 'react-redux';
 
+// Comment section of the post 
+
+
+
 import { commentPost } from '../../actions/posts';
 import useStyles from './styles';
 
@@ -16,8 +20,13 @@ const CommentSection = ({ post }) => {
   const handleComment = async () => {
     const newComments = await dispatch(commentPost(`${user?.result?.name}: ${comment}`, post._id));
 
-    setComment('');
-    setComments(newComments);
+    
+    if(user?.result?.name){
+      setComments(newComments);
+    }
+    else{
+      setComment('');
+    }
 
     commentsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -39,7 +48,7 @@ const CommentSection = ({ post }) => {
           <Typography gutterBottom variant="h6">Write a comment</Typography>
           <TextField fullWidth rows={4} variant="outlined" label="Comment" multiline value={comment} onChange={(e) => setComment(e.target.value)} />
           <br />
-          <Button style={{ marginTop: '10px' }} fullWidth disabled={!comment.length} color="primary" variant="contained" onClick={handleComment}>
+          <Button style={{ marginTop: '10px' }} fullWidth disabled={!user?.result?.name} color="primary" variant="contained" onClick={handleComment}>
             Comment
           </Button>
         </div>

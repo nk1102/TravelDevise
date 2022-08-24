@@ -1,3 +1,5 @@
+// user methods for the registering and login of the user 
+
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 

@@ -1,3 +1,5 @@
+// all the posts are seen on the home page using pagination 
+
 import React from 'react';
 import { Grid, CircularProgress } from '@material-ui/core';
 import { useSelector } from 'react-redux';

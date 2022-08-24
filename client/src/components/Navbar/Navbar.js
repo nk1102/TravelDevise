@@ -1,3 +1,5 @@
+// Navbar of the application 
+
 import React, { useState, useEffect } from 'react';
 import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
