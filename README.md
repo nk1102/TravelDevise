@@ -52,7 +52,7 @@ Or the places that are on the this planet earth. but no body has listened about 
 
 #### Like Post 
 ```http
-  PATCH /posts/${id}/likePos
+  PATCH /posts/${id}/likePost
 ```
 
 | Parameter | Type     | Description                       |
