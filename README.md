@@ -52,7 +52,7 @@ Or the places that are on the this planet earth. but no body has listened about 
 
 #### Like Post 
 ```http
-  PATCH /posts/${id}/likePos
+  PATCH /posts/${id}/likePost
 ```
 
 | Parameter | Type     | Description                       |
@@ -136,7 +136,7 @@ https://traveldevise.netlify.app/
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`CONECTION_URL = YOUR MONGO DB CLUSTER URL` 
+`CONNECTION_URL = YOUR MONGO DB CLUSTER URL` 
 
 
 ## To Run the Application 
