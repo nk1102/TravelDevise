@@ -130,6 +130,17 @@ https://traveldevise.netlify.app/
 
 
 
+## Screenshots
+
+![](/client/Images/Home%20Page.jpg)
+
+![](/client/Images/LoginRegisterPage.jpg)
+
+![](/client/Images/postdetailpage.jpg)
+
+![](/client/Images/userLoggined%20page.jpg)
+
+
 
 
 ## Environment Variables
