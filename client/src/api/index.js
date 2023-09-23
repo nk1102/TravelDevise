@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Please change the base URL to https://localhost:5000
 // to let the app work accordingly 
-const API = axios.create({ baseURL: 'https://traveldevise1.herokuapp.com/' });
+const API = axios.create({ baseURL: 'https://travel-devise-server.vercel.app' });
 // All the API's used in this applciation is listed below you can use them in the postman
 
 API.interceptors.request.use((req) => {
